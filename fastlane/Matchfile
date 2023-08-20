@@ -1,2 +1,2 @@
-#git_url("")
-#git_branch ""
+git_url("https://github.com/amorimrob/helloios")
+git_branch "develop"
