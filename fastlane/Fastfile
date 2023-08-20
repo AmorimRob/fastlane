@@ -60,8 +60,6 @@ platform :ios do
     desc "Build"
     lane :build do
 
-        #match(type: "appstore", readonly: true)
-
         cocoapods
         
         build_app(
@@ -73,6 +71,20 @@ platform :ios do
                     ENV["APP_IDENTIFIER"] => ENV["PROFILE_APP_STORE"]
                 }
             }
+        )
+    end
+
+
+    desc "Build with Match"
+    lane :build_match do
+
+        match(type: "appstore", readonly: true)
+
+        cocoapods
+        
+        build_app(
+            workspace: ENV["WORKSPACE"],
+            scheme: ENV["SCHEME"]
         )
     end
 
