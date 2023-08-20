@@ -114,7 +114,8 @@ platform :ios do
 
     desc "Upload to Test Flight"
     lane :tf do
-    
+        inc
+
         build
 
         # https://docs.fastlane.tools/actions/upload_to_testflight
